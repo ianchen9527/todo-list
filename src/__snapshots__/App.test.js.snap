@@ -7,5 +7,10 @@ exports[`App should render without crashing 1`] = `
     exact={true}
     path="/"
   />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/notes"
+  />
 </Switch>
 `;
