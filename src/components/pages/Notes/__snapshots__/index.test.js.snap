@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="increaser-wrapper"
+  />
+  <div
+    className="note-list-wrapper"
+  >
+    <Connect(withLifecycle(NoteList)) />
+  </div>
+  <div
+    className="note-viewer-wrapper"
+  />
+</div>
+`;
+
+exports[`Notes should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="increaser-wrapper"
+  />
+  <div
+    className="note-list-wrapper"
+  >
+    <Connect(withLifecycle(NoteList)) />
+  </div>
+  <div
+    className="note-viewer-wrapper"
+  />
+</div>
+`;
