@@ -1,4 +1,4 @@
-@import "../../stylesheets/constants/colors.scss";
+@import "../../../stylesheets/constants/colors.scss";
 
 .wrapper {
   width: 100vw;
@@ -33,7 +33,7 @@
     .logo {
       width: 120px;
       height: 120px;
-      background-image: url("../../assets/images/list.svg");
+      background-image: url("../../../assets/images/list.svg");
     }
 
     .description {
@@ -47,7 +47,7 @@
 
     &:hover {
       .logo {
-        background-image: url("../../assets/images/list-hover.svg");
+        background-image: url("../../../assets/images/list-hover.svg");
       }
     }
 

@@ -1,0 +1,28 @@
+@import "../../../stylesheets/constants/colors.scss";
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $main-color;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+
+  .increaser-wrapper {
+    width: 100vw;
+    height: 60px;
+    background: red;
+  }
+
+  .note-list-wrapper {
+    width: 30vw;
+    height: calc(100vh - 60px);
+    background: green;
+  }
+
+  .note-viewer-wrapper {
+    width: 70vw;
+    height: calc(100vh - 60px);
+    background: blue;
+  }
+}
