@@ -8,21 +8,34 @@
   display: flex;
   flex-flow: row wrap;
 
-  .increaser-wrapper {
+  .note-increaser-wrapper {
     width: 100vw;
     height: 60px;
-    background: red;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    background: $main-color;
+    border-bottom: 1px solid $black;
+    box-sizing: border-box;
   }
 
   .note-list-wrapper {
     width: 30vw;
     height: calc(100vh - 60px);
-    background: green;
+    background: $main-color;
+    border-right: 1px solid $black;
+    box-sizing: border-box;
   }
 
   .note-viewer-wrapper {
     width: 70vw;
     height: calc(100vh - 60px);
-    background: blue;
+    background: $main-color;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    color: $black;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
