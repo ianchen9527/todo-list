@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import notes from "./notes";
+import noteList from "./noteList";
+import noteIncreaser from "./noteIncreaser";
+import noteViewer from "./noteViewer";
 
-export default combineReducers({
-  notes,
-});
+export default combineReducers({ noteList, noteIncreaser, noteViewer });

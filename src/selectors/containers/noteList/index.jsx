@@ -1,7 +1,8 @@
 import { createSelector } from "reselect";
 import { getNotes as getNotesFromResponse } from "../../responses/notes";
-import { push } from "react-router-redux";
 import routes from "../../../constants/routes";
+
+const state = ({ containers }) => containers.noteList;
 
 export const getNotes = createSelector(
   getNotesFromResponse,
@@ -12,4 +13,10 @@ export const getNotes = createSelector(
     }))
 );
 
-export const getOnNoteClick = (dispatch) => (id) => dispatch(push(routes.HOME));
+export const getLoading = createSelector(state, ({ loading }) => loading);
+
+export const getDisabled = () =>
+  window.location.pathname === routes.NOTE_EDIT();
+
+export const getOnNoteClick = (history) => (id) =>
+  !getDisabled() && history.push(routes.NOTE(id));
