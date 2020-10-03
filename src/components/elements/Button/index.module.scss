@@ -1,0 +1,59 @@
+@import "../../../stylesheets/constants/colors.scss";
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  height: 40px;
+  background-color: $button;
+  border: 1px solid $black;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $black;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 21px;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover {
+      background-color: $button;
+    }
+  }
+
+  @mixin icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 20px 20px;
+    margin-right: 15px;
+  }
+
+  .icon-add {
+    @include icon();
+    
+    background-image: url("../../../assets/images/add.svg");
+  }
+
+  .icon-edit {
+    @include icon();
+    
+    background-image: url("../../../assets/images/edit.svg");
+  }
+
+  .loading {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 20px 20px;
+    background-image: url("../../../assets/images/loading.gif");
+    margin-left: 15px;
+  }
+}
