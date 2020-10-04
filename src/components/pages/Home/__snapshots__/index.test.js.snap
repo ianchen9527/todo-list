@@ -14,7 +14,7 @@ exports[`Home should render without crashing 1`] = `
   </div>
   <Link
     className="enter-button"
-    to="/notes"
+    to={[Function]}
   >
     <div
       className="logo"

@@ -5,15 +5,19 @@ exports[`Notes should render without crashing 1`] = `
   className="wrapper"
 >
   <div
-    className="increaser-wrapper"
-  />
+    className="note-increaser-wrapper"
+  >
+    <withRouter(Connect(NoteIncreaser)) />
+  </div>
   <div
     className="note-list-wrapper"
   >
-    <Connect(withLifecycle(NoteList)) />
+    <withRouter(Connect(withLifecycle(NoteList))) />
   </div>
   <div
     className="note-viewer-wrapper"
-  />
+  >
+    Please select a note to view or edit...
+  </div>
 </div>
 `;
