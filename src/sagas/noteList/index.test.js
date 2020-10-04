@@ -1,6 +1,7 @@
 import { testSaga } from "redux-saga-test-plan";
 import apis from "../../apis";
 import { updateNotes } from "../../reducers/responses/notes";
+import { updateLoading } from "../../reducers/containers/noteList";
 import watcher, {
   ON_DID_MOUNT,
   onDidMount,
@@ -10,7 +11,7 @@ import watcher, {
 
 describe("ON_DID_MOUNT", () => {
   it("should be the correct action type", () => {
-    expect(ON_DID_MOUNT).toBe(`${__dirname}/index.js/ON_DID_MOUNT`);
+    expect(ON_DID_MOUNT).toBe("noteList/ON_DID_MOUNT");
   });
 });
 
@@ -38,7 +39,11 @@ describe("getOnDidMount", () => {
 
 describe("watcher", () => {
   it("should watch correspond action", () => {
-    testSaga(watcher).next().takeEvery(ON_DID_MOUNT, sagaOnDidMount);
+    testSaga(watcher)
+      .next()
+      .takeEvery(ON_DID_MOUNT, sagaOnDidMount)
+      .next()
+      .isDone();
   });
 });
 
@@ -51,9 +56,13 @@ describe("sagaOnDidMount", () => {
   it("should run correctly", () => {
     testSaga(sagaOnDidMount)
       .next()
+      .put(updateLoading(true))
+      .next()
       .call(apis.fetchNotes)
       .next(mockNotes)
       .put(updateNotes(mockNotes))
+      .next()
+      .put(updateLoading(false))
       .next()
       .isDone();
   });

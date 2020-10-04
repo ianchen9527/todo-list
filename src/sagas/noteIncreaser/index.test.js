@@ -1,59 +1,59 @@
 import { testSaga } from "redux-saga-test-plan";
 import apis from "../../apis";
 import { updateNotes } from "../../reducers/responses/notes";
-import watcher, {
-  ON_DID_MOUNT,
-  onDidMount,
-  getOnDidMount,
-  sagaOnDidMount,
-} from "./index";
+import routes from "../../constants/routes";
+import { updateLoading } from "../../reducers/containers/noteIncreaser";
+import watcher, { ON_CLICK, onClick, sagaOnClick } from "./index";
 
-describe("ON_DID_MOUNT", () => {
+describe("ON_CLICK", () => {
   it("should be the correct action type", () => {
-    expect(ON_DID_MOUNT).toBe(`${__dirname}/index.js/ON_DID_MOUNT`);
+    expect(ON_CLICK).toBe("noteIncreaser/ON_CLICK");
   });
 });
 
-describe("onDidMount", () => {
-  it("should be the correct action object", () => {
-    expect(onDidMount).toEqual({ type: ON_DID_MOUNT });
-  });
-});
-
-describe("getOnDidMount", () => {
-  let dispatch;
+describe("onClick", () => {
+  let history;
   beforeEach(() => {
-    dispatch = jest.fn();
-    getOnDidMount()({ dispatch });
-  });
-
-  afterEach(() => {
-    dispatch.mockClear();
+    history = "history";
   });
 
   it("should return a callback which dispatching ON_DID_MOUNT", () => {
-    expect(dispatch).toHaveBeenCalledWith(onDidMount);
+    expect(onClick(history)).toEqual({ type: ON_CLICK, payload: { history } });
   });
 });
 
 describe("watcher", () => {
   it("should watch correspond action", () => {
-    testSaga(watcher).next().takeEvery(ON_DID_MOUNT, sagaOnDidMount);
+    testSaga(watcher).next().takeEvery(ON_CLICK, sagaOnClick).next().isDone();
   });
 });
 
-describe("sagaOnDidMount", () => {
-  let mockNotes;
+describe("sagaOnClick", () => {
+  let mockNotes, mockNote, action;
   beforeEach(() => {
     mockNotes = "mockNotes";
+    mockNote = { id: 1 };
+    action = {
+      payload: {
+        history: { push: jest.fn() },
+      },
+    };
   });
 
   it("should run correctly", () => {
-    testSaga(sagaOnDidMount)
+    testSaga(sagaOnClick, action)
       .next()
+      .put(updateLoading(true))
+      .next()
+      .call(apis.addNote)
+      .next(mockNote)
       .call(apis.fetchNotes)
       .next(mockNotes)
       .put(updateNotes(mockNotes))
+      .next()
+      .put(updateLoading(false))
+      .next()
+      .call(action.payload.history.push, routes.NOTE_EDIT(mockNote.id))
       .next()
       .isDone();
   });

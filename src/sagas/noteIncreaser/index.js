@@ -14,7 +14,7 @@ export function* sagaOnClick(action) {
   const notes = yield call(apis.fetchNotes);
   yield put(updateNotes(notes));
   yield put(updateLoading(false));
-  action.payload.history.push(routes.NOTE_EDIT(note.id));
+  yield call(action.payload.history.push, routes.NOTE_EDIT(note.id));
 }
 
 export default function* watcher() {
