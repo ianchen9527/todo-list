@@ -48,6 +48,24 @@
     background-image: url("../../../assets/images/edit.svg");
   }
 
+  .icon-save {
+    @include icon();
+    
+    background-image: url("../../../assets/images/save.svg");
+  }
+
+  .icon-cancel {
+    @include icon();
+    
+    background-image: url("../../../assets/images/cancel.svg");
+  }
+
+  .icon-delete {
+    @include icon();
+    
+    background-image: url("../../../assets/images/delete.svg");
+  }
+
   .loading {
     width: 20px;
     height: 20px;

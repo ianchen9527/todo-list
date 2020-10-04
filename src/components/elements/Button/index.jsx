@@ -19,7 +19,7 @@ const Button = ({ icon, loading, onClick, text, disabled }) => {
   );
 };
 
-Button.oropTypes = {
+Button.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
