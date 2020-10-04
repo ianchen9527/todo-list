@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteIncreaser default props should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <Button
+    disabled={false}
+    icon="add"
+    loading={false}
+    onClick={null}
+    text="New Note"
+  />
+</div>
+`;
+
+exports[`NoteIncreaser props.disabled is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <Button
+    disabled={false}
+    icon="add"
+    loading={false}
+    onClick={null}
+    text="New Note"
+  />
+</div>
+`;
+
+exports[`NoteIncreaser props.disabled is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <Button
+    disabled={true}
+    icon="add"
+    loading={false}
+    onClick={null}
+    text="New Note"
+  />
+</div>
+`;
+
+exports[`NoteIncreaser props.loading is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <Button
+    disabled={false}
+    icon="add"
+    loading={false}
+    onClick={null}
+    text="New Note"
+  />
+</div>
+`;
+
+exports[`NoteIncreaser props.loading is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <Button
+    disabled={false}
+    icon="add"
+    loading={true}
+    onClick={null}
+    text="New Note"
+  />
+</div>
+`;

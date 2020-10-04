@@ -29,7 +29,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   onClick: null,
-  diabled: false,
+  disabled: false,
   loading: false,
   icon: "",
   text: "",

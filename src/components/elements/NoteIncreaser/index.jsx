@@ -4,9 +4,11 @@ import styles from "./index.module.scss";
 import Button from "../Button";
 
 const NoteIncreaser = (props) => {
-  return <div className={styles['wrapper']}>
-    <Button {...props} text="New Note" icon="add" />
-    </div>;
+  return (
+    <div className={styles["wrapper"]}>
+      <Button {...props} text="New Note" icon="add" />
+    </div>
+  );
 };
 
 NoteIncreaser.propTypes = {
@@ -17,7 +19,7 @@ NoteIncreaser.propTypes = {
 
 NoteIncreaser.defaultProps = {
   onClick: null,
-  diabled: false,
+  disabled: false,
   loading: false,
 };
 
