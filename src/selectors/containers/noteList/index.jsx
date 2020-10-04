@@ -2,7 +2,7 @@ import { createSelector } from "reselect";
 import { getNotes as getNotesFromResponse } from "../../responses/notes";
 import routes from "../../../constants/routes";
 
-const state = ({ containers }) => containers.noteList;
+export const state = ({ containers }) => containers.noteList;
 
 export const getNotes = createSelector(
   getNotesFromResponse,

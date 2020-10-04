@@ -2,7 +2,7 @@ import { createSelector } from "reselect";
 import { getNotes as getNotesFromResponse } from "../../responses/notes";
 import routes from "../../../constants/routes";
 
-const state = ({ containers }) => containers.noteViewer;
+export const state = ({ containers }) => containers.noteViewer;
 
 export const getNote = createSelector(
   getNotesFromResponse,
@@ -14,5 +14,5 @@ export const getNote = createSelector(
 
 export const getLoading = createSelector(state, ({ loading }) => loading);
 
-export const getOnEditClick = (history) => (match) => () =>
+export const getOnEditClick = (history, match) => () =>
   history.push(routes.NOTE_EDIT(match.params.id));

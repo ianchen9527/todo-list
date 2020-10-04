@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 import { updateNote } from "../../../reducers/containers/noteEditor";
 
-const state = ({ containers }) => containers.noteEditor;
+export const state = ({ containers }) => containers.noteEditor;
 
 export const getNote = createSelector(state, ({ note }) => note);
 

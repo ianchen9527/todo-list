@@ -13,7 +13,7 @@ import { withRouter } from "react-router-dom";
 const mapStateToProps = (state, { history, match }) => ({
   note: getNote(state)(match),
   loading: getLoading(state),
-  onEditClick: getOnEditClick(history)(match),
+  onEditClick: getOnEditClick(history, match),
 });
 
 const mapDispatchToProps = (dispatch) => ({ dispatch });
