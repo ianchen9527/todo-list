@@ -40,7 +40,6 @@ const renderEditor = ({
   );
 
 const NoteEditor = (props) => {
-  console.log(props);
   return (
     <div className={styles["wrapper"]}>
       {props.loading ? renderLoadingView() : renderEditor(props)}
@@ -49,7 +48,11 @@ const NoteEditor = (props) => {
 };
 
 NoteEditor.propTypes = {
-  note: PropTypes.shape({ title: PropTypes.string, id: PropTypes.number }),
+  note: PropTypes.shape({
+    title: PropTypes.string,
+    id: PropTypes.number,
+    content: PropTypes.string,
+  }),
   loading: PropTypes.bool,
   onTitleChange: PropTypes.func,
   onContentChange: PropTypes.func,

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteEditor default props should render without crashing 1`] = `
+<div
+  className="wrapper"
+/>
+`;
+
+exports[`NoteEditor props.loading is false props.note is set should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    value="title"
+  />
+  <textarea
+    className="content"
+    onChange={[Function]}
+    value="content"
+  />
+  <div
+    className="buttons-wrapper"
+  >
+    <div
+      className="button-wrapper"
+    >
+      <Button
+        diabled={false}
+        icon="cancel"
+        loading={false}
+        onClick={null}
+        text="Cancel"
+      />
+    </div>
+    <div
+      className="button-wrapper"
+    >
+      <Button
+        diabled={false}
+        icon="save"
+        loading={false}
+        onClick={null}
+        text="Save"
+      />
+    </div>
+    <div
+      className="button-wrapper"
+    >
+      <Button
+        diabled={false}
+        icon="delete"
+        loading={false}
+        onClick={null}
+        text="Delete"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoteEditor props.loading is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+/>
+`;
+
+exports[`NoteEditor props.loading is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="loading-view"
+  />
+</div>
+`;
