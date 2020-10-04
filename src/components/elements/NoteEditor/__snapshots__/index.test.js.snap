@@ -27,7 +27,7 @@ exports[`NoteEditor props.loading is false props.note is set should render witho
       className="button-wrapper"
     >
       <Button
-        diabled={false}
+        disabled={false}
         icon="cancel"
         loading={false}
         onClick={null}
@@ -38,7 +38,7 @@ exports[`NoteEditor props.loading is false props.note is set should render witho
       className="button-wrapper"
     >
       <Button
-        diabled={false}
+        disabled={false}
         icon="save"
         loading={false}
         onClick={null}
@@ -49,7 +49,7 @@ exports[`NoteEditor props.loading is false props.note is set should render witho
       className="button-wrapper"
     >
       <Button
-        diabled={false}
+        disabled={false}
         icon="delete"
         loading={false}
         onClick={null}
