@@ -23,7 +23,6 @@ const renderViewer = (note, onEditClick) =>
   );
 
 const NoteViewer = ({ note, loading, onEditClick }) => {
-  console.log(loading);
   return (
     <div className={styles["wrapper"]}>
       {loading ? renderLoadingView() : renderViewer(note, onEditClick)}

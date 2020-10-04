@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteViewer default props should render without crashing 1`] = `
+<div
+  className="wrapper"
+/>
+`;
+
+exports[`NoteViewer props.loading is false props.note is set should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    title
+  </div>
+  <div
+    className="content"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>content</p>",
+      }
+    }
+  />
+  <div
+    className="edit-button-wrapper"
+  >
+    <Button
+      disabled={false}
+      icon="edit"
+      loading={false}
+      onClick={null}
+      text="Edit"
+    />
+  </div>
+</div>
+`;
+
+exports[`NoteViewer props.loading is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+/>
+`;
+
+exports[`NoteViewer props.loading is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="loading-view"
+  />
+</div>
+`;

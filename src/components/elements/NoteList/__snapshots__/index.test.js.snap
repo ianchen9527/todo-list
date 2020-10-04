@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteList default props should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Note List
+  </div>
+  <div
+    className="place-holder"
+  >
+    Please click the "New Note" button to add a new note...
+  </div>
+</div>
+`;
+
+exports[`NoteList props.loading is false props.notes is an empty array should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Note List
+  </div>
+  <div
+    className="place-holder"
+  >
+    Please click the "New Note" button to add a new note...
+  </div>
+</div>
+`;
+
+exports[`NoteList props.loading is false props.notes is not an empty array should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Note List
+  </div>
+  <div
+    className="note-wrapper"
+    key="1"
+    onClick={[Function]}
+  >
+    title 1
+  </div>
+  <div
+    className="note-wrapper"
+    key="2"
+    onClick={[Function]}
+  >
+    title 2
+  </div>
+  <div
+    className="note-wrapper"
+    key="3"
+    onClick={[Function]}
+  >
+    title 3
+  </div>
+</div>
+`;
+
+exports[`NoteList props.loading is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Note List
+  </div>
+  <div
+    className="place-holder"
+  >
+    Please click the "New Note" button to add a new note...
+  </div>
+</div>
+`;
+
+exports[`NoteList props.loading is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Note List
+  </div>
+  <div
+    className="loading-view"
+  />
+</div>
+`;
