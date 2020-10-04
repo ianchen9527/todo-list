@@ -1,5 +1,54 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+And it was deployed to firebase hosting service. Please see [here](https://todo-list-ee465.web.app).
+
+## Main Technique
+
+- node 14.13
+- react 16.13
+- redux
+- react-router-redux
+- redux-saga
+- sass
+- css module
+
+
+## Specification
+
+[Reference](https://gist.github.com/mmso/9097e36918084fa8ab3b0bb823327201)
+
+#### Home Page (/)
+
+This is out of scope, just for beauty.
+
+#### List Mode (/notes)
+
+When a user enter to the note list but doesn't select any note, this page will show.
+
+#### View Mode (/notes/:note_id)
+
+Follow the [Reference](https://gist.github.com/mmso/9097e36918084fa8ab3b0bb823327201).
+
+In view mode the note content will be shown in markdown format.
+
+#### Edit Mode (/notes/:note_id/edit)
+
+Follow the [Reference](https://gist.github.com/mmso/9097e36918084fa8ab3b0bb823327201).
+
+In edit mode the note content will be shown in raw data format (pure text).
+
+#### Data
+
+According to the [Reference](https://gist.github.com/mmso/9097e36918084fa8ab3b0bb823327201), 3 mock functions are built:
+
+1. [Mock API call](https://github.com/ianchen9527/todo-list/blob/develop/src/apis/mockApiCall.js)
+2. [Mock encrypt](https://github.com/ianchen9527/todo-list/blob/develop/src/utils/encrypt/index.js#L7)
+3. [Mock decrypt](https://github.com/ianchen9527/todo-list/blob/develop/src/utils/encrypt/index.js#L12)
+
+To simulate the async delay, all of them have a 500ms delay time.
+
+--
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,43 +75,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
