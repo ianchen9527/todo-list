@@ -15,8 +15,8 @@ export const getNotes = createSelector(
 
 export const getLoading = createSelector(state, ({ loading }) => loading);
 
-export const getDisabled = () =>
-  window.location.pathname === routes.NOTE_EDIT();
+export const getDisabled = (match) =>
+  window.location.pathname === routes.NOTE_EDIT(match.params.id);
 
-export const getOnNoteClick = (history) => (id) =>
-  !getDisabled() && history.push(routes.NOTE(id));
+export const getOnNoteClick = (history, match) => (id) =>
+  !getDisabled(match) && history.push(routes.NOTE(id));

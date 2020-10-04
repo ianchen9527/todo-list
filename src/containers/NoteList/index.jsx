@@ -11,11 +11,11 @@ import withLifecycle from "@hocs/with-lifecycle";
 import { getOnDidMount } from "../../sagas/noteList";
 import { withRouter } from "react-router-dom";
 
-const mapStateToProps = (state, { history }) => ({
+const mapStateToProps = (state, { history, match }) => ({
   notes: getNotes(state),
-  disabled: getDisabled(state),
+  disabled: getDisabled(match),
   loading: getLoading(state),
-  onNoteClick: getOnNoteClick(history),
+  onNoteClick: getOnNoteClick(history, match),
 });
 
 const mapDispatchToProps = (dispatch) => ({ dispatch });
