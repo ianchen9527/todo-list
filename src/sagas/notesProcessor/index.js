@@ -1,7 +1,7 @@
 import { all, call, select } from "redux-saga/effects";
 import { getNotes as getNotesFromResponse } from "../../selectors/responses/notes";
 import apis from "../../apis";
-import { decrypt } from "../../utils/encrypt";
+import { decrypt, encrypt } from "../../utils/encrypt";
 
 export function* sagaFetchNotes() {
   let notes = yield select(getNotesFromResponse);
@@ -16,4 +16,18 @@ export function* sagaFetchNotes() {
     }));
   }
   return notes;
+}
+
+export function* sagaSaveNotes(note) {
+  let notes = yield select(getNotesFromResponse);
+  const content = yield call(encrypt, note.content);
+  const encryptNote = { ...note, content };
+  yield call(
+    apis.saveNotes,
+    notes.map((n) => (n.id === note.id ? encryptNote : n))
+  );
+}
+
+export function* sagaDeleteNote(id) {
+  yield call(apis.deleteNote, id);
 }
