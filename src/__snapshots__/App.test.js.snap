@@ -12,5 +12,15 @@ exports[`App should render without crashing 1`] = `
     exact={true}
     path="/notes"
   />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/notes/:id"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/notes/:id/edit"
+  />
 </Switch>
 `;
