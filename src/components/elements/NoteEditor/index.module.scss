@@ -1,0 +1,61 @@
+@import "../../../stylesheets/constants/colors.scss";
+
+.wrapper {
+  width: 70vw;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 20px;
+    
+
+  .title {
+    border: 1px solid $black;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: $button;
+    color: $black;
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  .loading-view {
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-size: 60px 60px;
+    background-image: url("../../../assets/images/loading.gif");
+  }
+
+  .content {
+    border: 1px solid $black;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: $button;
+    color: $black;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 21px;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .buttons-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .button-wrapper {
+      width: 100px;
+      margin-right: 15px;
+    }
+  }
+}

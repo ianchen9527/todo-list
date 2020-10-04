@@ -1,0 +1,41 @@
+@import "../../../stylesheets/constants/colors.scss";
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $main-color;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+
+  .note-increaser-wrapper {
+    width: 100vw;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    background: $main-color;
+    border-bottom: 1px solid $black;
+    box-sizing: border-box;
+  }
+
+  .note-list-wrapper {
+    width: 30vw;
+    height: calc(100vh - 60px);
+    background: $main-color;
+    border-right: 1px solid $black;
+    box-sizing: border-box;
+  }
+
+  .note-viewer-wrapper {
+    width: 70vw;
+    height: calc(100vh - 60px);
+    background: $main-color;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    color: $black;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

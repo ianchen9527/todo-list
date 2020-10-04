@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="title"
+  >
+    Welcome to the 
+    <b>
+      Proton Note Demo
+    </b>
+  </div>
+  <Link
+    className="enter-button"
+    to={[Function]}
+  >
+    <div
+      className="logo"
+    />
+    <div
+      className="description"
+    >
+      Enter
+    </div>
+  </Link>
+</div>
+`;

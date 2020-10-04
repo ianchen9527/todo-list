@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notes should render without crashing 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="note-increaser-wrapper"
+  >
+    <withRouter(Connect(NoteIncreaser)) />
+  </div>
+  <div
+    className="note-list-wrapper"
+  >
+    <withRouter(Connect(withLifecycle(NoteList))) />
+  </div>
+  <div
+    className="note-viewer-wrapper"
+  >
+    <withRouter(Connect(withLifecycle(NoteViewer))) />
+  </div>
+</div>
+`;
