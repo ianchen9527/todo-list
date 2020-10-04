@@ -9,7 +9,7 @@ const NoteIncreaser = (props) => {
     </div>;
 };
 
-NoteIncreaser.oropTypes = {
+NoteIncreaser.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,

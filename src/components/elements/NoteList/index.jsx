@@ -38,7 +38,7 @@ const NoteList = (props) => (
   </div>
 );
 
-NoteList.oropTypes = {
+NoteList.propTypes = {
   notes: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, id: PropTypes.number })
   ),
