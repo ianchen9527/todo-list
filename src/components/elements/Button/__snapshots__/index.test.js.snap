@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button default props should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+/>
+`;
+
+exports[`Button props.disabled is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+/>
+`;
+
+exports[`Button props.disabled is true should render without crashing 1`] = `
+<div
+  className="wrapper disabled"
+  onClick={null}
+/>
+`;
+
+exports[`Button props.icon is set should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+>
+  <div
+    className="icon-icon"
+  />
+</div>
+`;
+
+exports[`Button props.loading is false should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+/>
+`;
+
+exports[`Button props.loading is true should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+>
+  <div
+    className="loading"
+  />
+</div>
+`;
+
+exports[`Button props.text is set should render without crashing 1`] = `
+<div
+  className="wrapper"
+  onClick={null}
+>
+  text
+</div>
+`;

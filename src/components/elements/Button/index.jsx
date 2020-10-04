@@ -31,7 +31,7 @@ Button.defaultProps = {
   onClick: null,
   diabled: false,
   loading: false,
-  icon: "add",
+  icon: "",
   text: "",
 };
 
