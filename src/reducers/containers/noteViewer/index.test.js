@@ -1,34 +1,34 @@
-import reducer, { UPDATE_NOTES, updateNotes } from "./index";
+import reducer, { UPDATE_LOADING, updateLoading } from "./index";
 
-describe("UPDATE_NOTES", () => {
+describe("UPDATE_LOADING", () => {
   it("should be the correct action type", () => {
-    expect(UPDATE_NOTES).toBe(`${__dirname}/index.js/UPDATE_NOTES`);
+    expect(UPDATE_LOADING).toBe("containers/noteViewer/UPDATE_LOADING");
   });
 });
 
-describe("updateNotes", () => {
-  let notes;
+describe("updateLoading", () => {
+  let loading;
   beforeEach(() => {
-    notes = "notes";
+    loading = "loading";
   });
 
   it("should be the correct action object", () => {
-    expect(updateNotes(notes)).toEqual({ type: UPDATE_NOTES, payload: notes });
+    expect(updateLoading(loading)).toEqual({ type: UPDATE_LOADING, payload: loading });
   });
 });
 
 describe("reducer", () => {
   describe("the action", () => {
     let action, state, payload;
-    describe("is UPDATE_NOTES", () => {
+    describe("is UPDATE_LOADING", () => {
       beforeEach(() => {
         state = [];
         payload = "payload";
-        action = updateNotes(payload);
+        action = updateLoading(payload);
       });
 
       it("should switch to corresponding case", () => {
-        expect(reducer(state, action)).toEqual(payload);
+        expect(reducer(state, action)).toEqual({ loading: payload });
       });
     });
 

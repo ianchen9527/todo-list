@@ -1,5 +1,5 @@
-export const UPDATE_LOADING = "noteEditor/UPDATE_LOADING";
-export const UPDATE_NOTE = "noteEditor/UPDATE_NOTE";
+export const UPDATE_LOADING = "containers/noteEditor/UPDATE_LOADING";
+export const UPDATE_NOTE = "containers/noteEditor/UPDATE_NOTE";
 
 export const updateLoading = (loading) => ({
   type: UPDATE_LOADING,

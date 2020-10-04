@@ -1,4 +1,4 @@
-export const UPDATE_LOADING = "noteList/UPDATE_LOADING";
+export const UPDATE_LOADING = "containers/noteList/UPDATE_LOADING";
 
 export const updateLoading = (loading) => ({
   type: UPDATE_LOADING,

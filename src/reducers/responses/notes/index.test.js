@@ -2,7 +2,7 @@ import reducer, { UPDATE_NOTES, updateNotes } from "./index";
 
 describe("UPDATE_NOTES", () => {
   it("should be the correct action type", () => {
-    expect(UPDATE_NOTES).toBe(`${__dirname}/index.js/UPDATE_NOTES`);
+    expect(UPDATE_NOTES).toBe("responses/notes/UPDATE_NOTES");
   });
 });
 

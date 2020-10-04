@@ -1,4 +1,4 @@
-export const UPDATE_NOTES = "notes/UPDATE_NOTES";
+export const UPDATE_NOTES = "responses/notes/UPDATE_NOTES";
 
 export const updateNotes = (notes) => ({ type: UPDATE_NOTES, payload: notes });
 
